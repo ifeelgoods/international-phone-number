@@ -46,11 +46,7 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
     # timeout so that the angular content has time to execute
     $timeout ->
       element.intlTelInput(options)
-      if options.nationalMode
-        selectedCountryData = element.intlTelInput('getSelectedCountryData')
-        return true unless selectedCountryData
-        newNumber = element.val().replace new RegExp("\\+#{selectedCountryData.dialCode}"), 0
-        element.intlTelInput 'setNumber', newNumber
+    , 500
 
     unless options.utilsScript
       element.intlTelInput('loadUtils', 'bower_components/intl-tel-input/lib/libphonenumber/build/utils.js')
