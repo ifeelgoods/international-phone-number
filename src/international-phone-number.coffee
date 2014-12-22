@@ -48,9 +48,6 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
       element.intlTelInput(options)
     , 500
 
-    unless options.utilsScript
-      element.intlTelInput('loadUtils', 'bower_components/intl-tel-input/lib/libphonenumber/build/utils.js')
-
     ctrl.$parsers.push (value) ->
       return value if !value
       if options.keepModelClean
