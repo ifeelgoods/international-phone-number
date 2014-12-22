@@ -47,9 +47,6 @@
         $timeout(function() {
           return element.intlTelInput(options);
         }, 500);
-        if (!options.utilsScript) {
-          element.intlTelInput('loadUtils', 'bower_components/intl-tel-input/lib/libphonenumber/build/utils.js');
-        }
         ctrl.$parsers.push(function(value) {
           if (!value) {
             return value;
