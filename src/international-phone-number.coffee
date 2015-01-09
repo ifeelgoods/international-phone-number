@@ -30,7 +30,9 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
       responsiveDropdown: false
       utilsScript:        ""
       keepModelClean:     false
-      ipinfoToken:        ''
+
+    if scope.ipinfoToken
+      options.ipinfoToken = scope.ipinfoToken
 
     angular.forEach options, (value, key) ->
       option = eval("attrs.#{key}")
