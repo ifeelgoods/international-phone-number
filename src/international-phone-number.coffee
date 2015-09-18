@@ -31,8 +31,7 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
       utilsScript:        ""
       keepModelClean:     false
 
-    if scope.ipinfoToken
-      options.ipinfoToken = scope.ipinfoToken
+    options.geoIpLookup = scope.geoIpLookup
 
     angular.forEach options, (value, key) ->
       option = eval("attrs.#{key}")

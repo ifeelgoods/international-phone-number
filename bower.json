@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "angular": "~1.3",
-    "intl-tel-input": "git+https://github.com/ifeelgoods/intl-tel-input.git#5.8.7-basil"
+    "intl-tel-input": "git+https://github.com/ifeelgoods/intl-tel-input.git#6.1.0-basil"
   }
 }

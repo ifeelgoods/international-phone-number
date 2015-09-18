@@ -29,9 +29,7 @@
           utilsScript: "",
           keepModelClean: false
         };
-        if (scope.ipinfoToken) {
-          options.ipinfoToken = scope.ipinfoToken;
-        }
+        options.geoIpLookup = scope.geoIpLookup;
         angular.forEach(options, function(value, key) {
           var option;
           option = eval("attrs." + key);
