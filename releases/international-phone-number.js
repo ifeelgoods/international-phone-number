@@ -53,7 +53,7 @@
             return value;
           }
           if (options.keepModelClean) {
-            return element.intlTelInput('getCleanNumber');
+            return element.intlTelInput('getNumber');
           } else {
             return value.replace(/[^\d]/g, '');
           }
