@@ -53,7 +53,7 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
     ctrl.$parsers.push (value) ->
       return value if !value
       if options.keepModelClean
-        element.intlTelInput('getCleanNumber')
+        element.intlTelInput('getNumber')
       else
         value.replace(/[^\d]/g, '')
 
