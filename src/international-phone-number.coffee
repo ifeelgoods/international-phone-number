@@ -12,9 +12,9 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
 
     read = () ->
       if intlTelInputUtils
-        currentText = telInput.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164)
+        currentText = element.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164)
         if typeof currentText is 'string'
-          telInput.intlTelInput('setNumber', currentText)
+          element.intlTelInput('setNumber', currentText)
       ctrl.$setViewValue element.val()
 
     handleWhatsSupposedToBeAnArray = (value) ->

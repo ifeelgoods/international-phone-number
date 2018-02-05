@@ -10,9 +10,9 @@
         read = function() {
           var currentText;
           if (intlTelInputUtils) {
-            currentText = telInput.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164);
+            currentText = element.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164);
             if (typeof currentText === 'string') {
-              telInput.intlTelInput('setNumber', currentText);
+              element.intlTelInput('setNumber', currentText);
             }
           }
           return ctrl.$setViewValue(element.val());
