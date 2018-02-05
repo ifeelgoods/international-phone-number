@@ -8,6 +8,13 @@
       link: function(scope, element, attrs, ctrl) {
         var handleWhatsSupposedToBeAnArray, options, read;
         read = function() {
+          var currentText;
+          if (intlTelInputUtils) {
+            currentText = telInput.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164);
+            if (typeof currentText === 'string') {
+              telInput.intlTelInput('setNumber', currentText);
+            }
+          }
           return ctrl.$setViewValue(element.val());
         };
         handleWhatsSupposedToBeAnArray = function(value) {
@@ -27,8 +34,7 @@
           nationalMode: false,
           numberType: '',
           onlyCountries: void 0,
-          preferredCountries: ['us', 'gb', 'fr'],
-          utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js'
+          preferredCountries: ['us', 'gb', 'fr']
         };
         options.geoIpLookup = scope.geoIpLookup;
         angular.forEach(options, function(value, key) {

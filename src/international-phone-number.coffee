@@ -11,6 +11,10 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
   link: (scope, element, attrs, ctrl) ->
 
     read = () ->
+      if intlTelInputUtils
+        currentText = telInput.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164)
+        if typeof currentText is 'string'
+          telInput.intlTelInput('setNumber', currentText)
       ctrl.$setViewValue element.val()
 
     handleWhatsSupposedToBeAnArray = (value) ->
@@ -30,7 +34,6 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
       numberType: ''
       onlyCountries: undefined
       preferredCountries: ['us', 'gb', 'fr']
-      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js'
 
     options.geoIpLookup = scope.geoIpLookup
 
