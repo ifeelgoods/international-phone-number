@@ -18,7 +18,8 @@
           }
         };
         options = {
-          autoFormat: true,
+          autoPlaceholder: 'aggressive',
+          formatOnDisplay: true,
           autoHideDialCode: true,
           defaultCountry: '',
           nationalMode: false,
@@ -26,7 +27,7 @@
           onlyCountries: void 0,
           preferredCountries: ['us', 'gb'],
           responsiveDropdown: false,
-          utilsScript: "",
+          utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js',
           keepModelClean: false
         };
         options.geoIpLookup = scope.geoIpLookup;

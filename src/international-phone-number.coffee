@@ -20,16 +20,17 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
         value.toString().replace(/[ ]/g, '').split(',')
 
     options =
-      autoFormat:         true
-      autoHideDialCode:   true
-      defaultCountry:     ''
-      nationalMode:       false
-      numberType:         ''
-      onlyCountries:      undefined
+      autoPlaceholder: 'aggressive'
+      formatOnDisplay: true
+      autoHideDialCode: true
+      defaultCountry: ''
+      nationalMode: false
+      numberType: ''
+      onlyCountries: undefined
       preferredCountries: ['us', 'gb']
       responsiveDropdown: false
-      utilsScript:        ""
-      keepModelClean:     false
+      utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js'
+      keepModelClean: false
 
     options.geoIpLookup = scope.geoIpLookup
 
