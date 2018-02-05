@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "AngularJS directive for intl-tel-input jQuery plugin",
   "scripts": {
-    "release": "angular-release"
+    "release": "grunt && angular-release"
   },
   "keywords": [
     "international",
