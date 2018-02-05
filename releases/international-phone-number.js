@@ -18,17 +18,17 @@
           }
         };
         options = {
-          autoPlaceholder: 'aggressive',
-          formatOnDisplay: true,
+          allowDropdown: true,
           autoHideDialCode: true,
-          defaultCountry: '',
+          autoPlaceholder: 'aggressive',
+          dropdownContainer: '',
+          formatOnDisplay: true,
+          initialCountry: '',
           nationalMode: false,
           numberType: '',
           onlyCountries: void 0,
-          preferredCountries: ['us', 'gb'],
-          responsiveDropdown: false,
-          utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js',
-          keepModelClean: false
+          preferredCountries: ['us', 'gb', 'fr'],
+          utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.8/js/utils.js'
         };
         options.geoIpLookup = scope.geoIpLookup;
         angular.forEach(options, function(value, key) {
