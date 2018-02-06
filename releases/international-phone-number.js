@@ -8,6 +8,13 @@
       link: function(scope, element, attrs, ctrl) {
         var handleWhatsSupposedToBeAnArray, options, read;
         read = function() {
+          var currentText;
+          if (intlTelInputUtils) {
+            currentText = element.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164);
+            if (typeof currentText === 'string') {
+              element.intlTelInput('setNumber', currentText);
+            }
+          }
           return ctrl.$setViewValue(element.val());
         };
         handleWhatsSupposedToBeAnArray = function(value) {
@@ -18,16 +25,16 @@
           }
         };
         options = {
-          autoFormat: true,
+          allowDropdown: true,
           autoHideDialCode: true,
-          defaultCountry: '',
+          autoPlaceholder: 'aggressive',
+          dropdownContainer: '',
+          formatOnDisplay: true,
+          initialCountry: '',
           nationalMode: false,
           numberType: '',
           onlyCountries: void 0,
-          preferredCountries: ['us', 'gb'],
-          responsiveDropdown: false,
-          utilsScript: "",
-          keepModelClean: false
+          preferredCountries: ['us', 'gb', 'fr']
         };
         options.geoIpLookup = scope.geoIpLookup;
         angular.forEach(options, function(value, key) {
