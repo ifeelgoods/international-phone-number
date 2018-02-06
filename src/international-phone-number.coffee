@@ -11,6 +11,10 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
   link: (scope, element, attrs, ctrl) ->
 
     read = () ->
+      if intlTelInputUtils
+        currentText = element.intlTelInput('getNumber', intlTelInputUtils.numberFormat.E164)
+        if typeof currentText is 'string'
+          element.intlTelInput('setNumber', currentText)
       ctrl.$setViewValue element.val()
 
     handleWhatsSupposedToBeAnArray = (value) ->
@@ -20,16 +24,16 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
         value.toString().replace(/[ ]/g, '').split(',')
 
     options =
-      autoFormat:         true
-      autoHideDialCode:   true
-      defaultCountry:     ''
-      nationalMode:       false
-      numberType:         ''
-      onlyCountries:      undefined
-      preferredCountries: ['us', 'gb']
-      responsiveDropdown: false
-      utilsScript:        ""
-      keepModelClean:     false
+      allowDropdown: true
+      autoHideDialCode: true
+      autoPlaceholder: 'aggressive'
+      dropdownContainer: ''
+      formatOnDisplay: true
+      initialCountry: ''
+      nationalMode: false
+      numberType: ''
+      onlyCountries: undefined
+      preferredCountries: ['us', 'gb', 'fr']
 
     options.geoIpLookup = scope.geoIpLookup
 
