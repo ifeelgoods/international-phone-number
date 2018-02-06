@@ -1,3 +1,13 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/ifeelgoods/international-phone-number/compare/0.0.7...0.1.0) (2018-02-06)
+
+
+### Features
+
+* Manage keepModelClean attribute + code style ([b7c1c21](https://github.com/ifeelgoods/international-phone-number/commit/b7c1c21))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/ifeelgoods/international-phone-number/compare/0.0.6...0.0.7) (2018-02-06)
 
