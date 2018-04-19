@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/ifeelgoods/international-phone-number/compare/0.1.0...0.1.1) (2018-04-19)
+
+
+### Bug Fixes
+
+* Fix validity ([8209c15](https://github.com/ifeelgoods/international-phone-number/commit/8209c15))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/ifeelgoods/international-phone-number/compare/0.0.7...0.1.0) (2018-02-06)
 
