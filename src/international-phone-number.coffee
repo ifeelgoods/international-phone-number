@@ -56,7 +56,7 @@ angular.module('internationalPhoneNumber', [])
         ctrl.$setValidity 'international-phone-number', element.intlTelInput('isValidNumber')
       else
         value = ''
-        delete ctrl.$error['international-phone-number']
+        ctrl.$setValidity 'international-phone-number', true
       return value
 
     element.on 'blur keyup change', -> $timeout _read
