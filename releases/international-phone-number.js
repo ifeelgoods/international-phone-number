@@ -28,13 +28,12 @@
           autoPlaceholder: 'aggressive',
           dropdownContainer: '',
           formatOnDisplay: true,
-          initialCountry: '',
+          initialCountry: 'fr',
           nationalMode: false,
           numberType: '',
           onlyCountries: void 0,
-          preferredCountries: ['us', 'gb', 'fr', 'br']
+          preferredCountries: ['fr', 'us', 'gb', 'br']
         };
-        options.geoIpLookup = scope.geoIpLookup;
         Object.keys(options).forEach(function(key) {
           var option;
           option = eval("attrs." + key);

@@ -1,3 +1,13 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/ifeelgoods/international-phone-number/compare/0.1.1...0.1.2) (2020-03-03)
+
+
+### Bug Fixes
+
+* Remove geoIpLookup plugin ([d240513](https://github.com/ifeelgoods/international-phone-number/commit/d240513))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/ifeelgoods/international-phone-number/compare/0.1.0...0.1.1) (2018-04-19)
 
