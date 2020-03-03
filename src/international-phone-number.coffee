@@ -21,13 +21,11 @@ angular.module('internationalPhoneNumber', [])
       autoPlaceholder: 'aggressive'
       dropdownContainer: ''
       formatOnDisplay: true
-      initialCountry: ''
+      initialCountry: 'fr'
       nationalMode: false
       numberType: ''
       onlyCountries: undefined
-      preferredCountries: ['us', 'gb', 'fr', 'br']
-
-    options.geoIpLookup = scope.geoIpLookup
+      preferredCountries: ['fr', 'us', 'gb', 'br']
 
     Object.keys(options).forEach (key) ->
       option = eval("attrs.#{key}")
